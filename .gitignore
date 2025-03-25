@@ -1,3 +1,5 @@
+*.py[cod]
+.idea
 /.venv
 /src/crawler/resources/state.json
 /data/processed/prepocessed_data.json
