@@ -1,0 +1,4 @@
+/.venv
+/src/crawler/resources/state.json
+/data/processed/prepocessed_data.json
+/data/raw/data.json
