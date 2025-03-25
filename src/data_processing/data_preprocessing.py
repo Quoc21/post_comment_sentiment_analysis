@@ -5,6 +5,7 @@ from src.config.config import CONFIG
 from underthesea import text_normalize
 from src.utils.file_utils import load_data_json, save_data_json
 from src.utils.data_processing_utils import get_metadata, count_comment
+from src.config.config import CONFIG
 
 VNCORENLP_PATH = 'E:\Work\AI\Project\post_comment_sentiment_analysis\.venv\Lib\site-packages\py_vncorenlp'
 
@@ -61,7 +62,7 @@ def remove_empty_cmt(comments, level):
             new_comments.append(comment)
     return new_comments
 
-def preprocess_data(data_path, return_data=False, file_path='preprocessed_data.json'):
+def preprocess_data(data_path, return_data=False):
     abbr = load_data_json(CONFIG['abbreviation_path'])
     emoji_vi = load_data_json(CONFIG['emoji_path'])
     rdrsegmenter = py_vncorenlp.VnCoreNLP(annotators=["wseg"], save_dir=VNCORENLP_PATH)
@@ -78,5 +79,4 @@ def preprocess_data(data_path, return_data=False, file_path='preprocessed_data.j
 
     if return_data:
         return data
-
-    save_data_json(data, file_path)
+    save_data_json(data, CONFIG['preprocessed_data_path'])

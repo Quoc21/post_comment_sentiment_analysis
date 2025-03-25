@@ -15,6 +15,7 @@ def is_cookie_expired(cookie):
 
 def save_post(post, path, indent=4, ensure_ascii=False):
     if not os.path.exists(path):
+        os.makedirs(os.path.dirname(path))
         data = {
             'metadata': {
                 'post_count': 1,
