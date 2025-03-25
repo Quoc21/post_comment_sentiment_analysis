@@ -2,5 +2,5 @@
 .idea
 /.venv
 /src/crawler/resources/state.json
-/data/processed/prepocessed_data.json
+/data/processed/preprocessed_data.json
 /data/raw/data.json
