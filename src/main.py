@@ -10,12 +10,17 @@ if __name__ == '__main__':
 
     # endregion
 
+
+
+
     # region crawl data
+
     # Nhớ xoá thông tin khi push code
-    # username = ''
-    # password = ''
-    # post_url = ''
-    # crawl_post_data(username, password, post_url)
+    username = '21112003nguyenphamanhquoc@gmail.com'
+    password = 'Anhquoc21112003'
+    post_url = 'https://www.facebook.com/share/p/1AFFGMFa7m/'
+    crawl_post_data(username, password, post_url)
+
     # endregion
 
     pass
